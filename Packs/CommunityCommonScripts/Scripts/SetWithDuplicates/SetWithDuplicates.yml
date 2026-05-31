@@ -1,0 +1,32 @@
+args:
+- description: The key to set.
+  name: key
+  required: true
+- description: The value to set to the key.
+  name: value
+  required: true
+- auto: PREDEFINED
+  defaultValue: "false"
+  description: Whether the argument should be saved as a string.
+  name: stringify
+  predefined:
+  - "true"
+  - "false"
+comment: Set a value in context under the key, allowing for duplicate values to be retained.
+commonfields:
+  id: SetWithDuplicates
+  version: -1
+dockerimage: demisto/python3:3.12.13.9059085
+enabled: true
+engineinfo: {}
+name: SetWithDuplicates
+runas: DBotWeakRole
+runonce: false
+scripttarget: 0
+subtype: python3
+tags:
+- Utility
+type: python
+fromversion: 6.10.0
+tests:
+- No tests (auto formatted)
